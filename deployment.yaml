@@ -4,7 +4,7 @@ metadata:
   name: valaxy-rtp
   namespace: valaxy
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app:  valaxy-rtp
@@ -14,10 +14,10 @@ spec:
         app:  valaxy-rtp
     spec:
       imagePullSecrets:
-      - name: jfrogcred
+      - name: jfrog-cred
       containers:
       - name:  valaxy-rtp
-        image: valaxy01.jfrog.io/valaxy-docker/ttrend:2.1.2
+        image: lanka.jfrog.io/image-docker/image:2.1.2
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
@@ -30,3 +30,4 @@ spec:
           value: "9703354-52rXHD6EeOQeYyhtNz1w8UVOgbcLcgOo4O7MB6WV3"
         - name: ACCESS_TOKEN_SECRET
           value: "zBThlZDEp8qnu7NwwdHNth8eg3Rf9zqbvUEFUTaZtN2SF"
+
