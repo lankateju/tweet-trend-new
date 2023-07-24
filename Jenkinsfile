@@ -53,7 +53,7 @@ environment {
         stage("kubernetes"){
             steps{
                 script{
-                    sh './deploy.sh'
+                    sh 'sh deploy.sh'
                 }
             }
         }
