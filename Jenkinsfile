@@ -49,6 +49,13 @@ environment {
         }
     }
         //
+        stage("kubernetes"){
+            steps{
+                script{
+                    sh './deploy.sh'
+                }
+            }
+        }
         
 }
 }
