@@ -1,5 +1,6 @@
 def registry = 'https://lanka.jfrog.io'
 def imageName = 'lanka.jfrog.io/image-docker/image'
+def version   = '2.1.2'
 pipeline {
     agent {
         node {
